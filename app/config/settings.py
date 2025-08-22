@@ -1,136 +1,162 @@
-import random
-import math
-from typing import List
+from pydantic_settings import BaseSettings
+from pydantic import Field, field_validator
+from typing import List, Optional, Any
 import os
-class Settings:
+from pathlib import Path
+from pathlib import Path
+
+class Settings(BaseSettings):
     """Configuration settings for the application."""
     
-    app_name: str = "MyApp"+ str(random.randint(1, 1000)) + " v1.0" + str(math.pi) + " (beta)" + str(random.randint(1, 1_000_000))
-    app_description: str = "This is a fastAPI application with dynamic settings."
-    app_version: str = "1.0.0"
-    app_author: str = "John Doe"
-    app_license: str = "MIT"
-    app_contact: str = ""
-    app_contact_email: str = ""
-    debug: bool = True
-    
-    # Server
-    host: str = "127.0.0.1"
-    port: int = 8000
-    reload: bool = True
-    
-    # Security
-    secret_key: str = "supersecret"
-    algorithm: List[str] = ["HS256"]
-    access_token_expire_minutes: int = 30
-    
-    # CORS
-    allow_origins: List[str] = ["*"]
-    allow_credentials: bool = True
-    allow_methods: List[str] = ["*"]
-    allow_headers: List[str] = ["*"]
-    
-    # Trusted Hosts
-    trusted_hosts: List[str] = ["localhost", "127.0.0.1", "*.localhost"]
-    
-    # Database
-    database_url: str = "sqlite:///./test.db"
-    database_echo: bool = False
-    database_pool_size: int = 5
-    database_max_overflow: int = 10
-    database_connect_args: dict = {"check_same_thread": False}
-    
-    # Logging
-    log_level: str = "INFO"
-    log_format: str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-    log_file: str = "logs/app.log"
-    log_rotation: str = "1 day"
-    log_retention: str = "7 days"
-    log_compression: bool = True
-    log_backtrace: bool = True
-    log_color: bool = True
-    log_json: bool = False
-    log_console: bool = True
-    log_file_size: int = 10 * 1024 * 1024  # 10 MB
-    log_file_count: int = 5
-    log_exception: bool = True
-    log_exception_format: str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-    log_exception_file: str = "logs/exception.log"
-    log_exception_rotation: str = "1 day"
-    log_exception_retention: str = "7 days"
-    log_exception_compression: bool = True
-    log_exception_backtrace: bool = True
-    log_exception_color: bool = True
-    log_exception_json: bool = False
-    log_exception_console: bool = True
-    log_exception_file_size: int = 10 * 1024 * 1024  # 10 MB
-    log_exception_file_count: int = 5
-    log_exception_level: str = "ERROR"
+    # Application Settings
+    app_name: str = Field(default="Auth Service", description="Application name")
+    app_description: str = Field(default="FastAPI Authentication and Authorization Service", description="Application description")
+    app_version: str = Field(default="1.0.0", description="Application version")
+    app_author: str = Field(default="Aditya Choudhury", description="Application author")
+    app_license: str = Field(default="MIT", description="Application license")
+    app_contact: str = Field(default="", description="Contact URL")
+    app_contact_email: str = Field(default="", description="Contact email")
     
     # Environment
-    environment: str = os.getenv("ENVIRONMENT", "development")
+    environment: str = Field(default="development", description="Environment (development, production, testing)")
+    debug: bool = Field(default=True, description="Debug mode")
     
+    # Server Configuration
+    host: str = Field(default="127.0.0.1", description="Server host")
+    port: int = Field(default=8000, description="Server port")
+    reload: bool = Field(default=True, description="Auto-reload on code changes")
     
-    def __init__(self):
-        """Initialize settings with environment variables if available."""
-        self.app_name = os.getenv("APP_NAME", self.app_name)
-        self.app_description = os.getenv("APP_DESCRIPTION", self.app_description)
-        self.app_version = os.getenv("APP_VERSION", self.app_version)
-        self.app_author = os.getenv("APP_AUTHOR", self.app_author)
-        self.app_license = os.getenv("APP_LICENSE", self.app_license)
-        self.debug = os.getenv("DEBUG", str(self.debug)).lower() in ("true", "1")
-        self.app_contact = os.getenv("APP_CONTACT", self.app_contact)
-        self.app_contact_email = os.getenv("APP_CONTACT_EMAIL", self.app_contact_email)
-        
-        self.host = os.getenv("HOST", self.host)
-        self.port = int(os.getenv("PORT", self.port))
-        self.reload = os.getenv("RELOAD", str(self.reload)).lower() in ("true", "1")
-        
-        self.secret_key = os.getenv("SECRET_KEY", self.secret_key)
-        self.algorithm = os.getenv("ALGORITHM", ",".join(self.algorithm)).split(",")
-        self.access_token_expire_minutes = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", self.access_token_expire_minutes))
-        
-        self.allow_origins = os.getenv("ALLOW_ORIGINS", ",".join(self.allow_origins)).split(",")
-        self.allow_credentials = os.getenv("ALLOW_CREDENTIALS", str(self.allow_credentials)).lower() in ("true", "1")
-        self.allow_methods = os.getenv("ALLOW_METHODS", ",".join(self.allow_methods)).split(",")
-        self.allow_headers = os.getenv("ALLOW_HEADERS", ",".join(self.allow_headers)).split(",")
-        
-        self.trusted_hosts = os.getenv("TRUSTED_HOSTS", ",".join(self.trusted_hosts)).split(",")
-        
-        self.database_url = os.getenv("DATABASE_URL", self.database_url)
-        self.database_echo = os.getenv("DATABASE_ECHO", str(self.database_echo)).lower() in ("true", "1")
-        self.database_pool_size = int(os.getenv("DATABASE_POOL_SIZE", self.database_pool_size))
-        self.database_max_overflow = int(os.getenv("DATABASE_MAX_OVERFLOW", self.database_max_overflow))
-        self.database_connect_args = {
-            "check_same_thread": os.getenv("DATABASE_CHECK_SAME_THREAD", str(self.database_connect_args.get("check_same_thread", False))).lower() in ("true", "1")
-        }
-        
-        self.log_level = os.getenv("LOG_LEVEL", self.log_level)
-        self.log_format = os.getenv("LOG_FORMAT", self.log_format)
-        self.log_file = os.getenv("LOG_FILE", self.log_file)
-        self.log_rotation = os.getenv("LOG_ROTATION", self.log_rotation)
-        self.log_retention = os.getenv("LOG_RETENTION", self.log_retention)
-        self.log_compression = os.getenv("LOG_COMPRESSION", str(self.log_compression)).lower() in ("true", "1")
-        self.log_backtrace = os.getenv("LOG_BACKTRACE", str(self.log_backtrace)).lower() in ("true", "1")
-        self.log_color = os.getenv("LOG_COLOR", str(self.log_color)).lower() in ("true", "1")
-        self.log_json = os.getenv("LOG_JSON", str(self.log_json)).lower() in ("true", "1")
-        self.log_console = os.getenv("LOG_CONSOLE", str(self.log_console)).lower() in ("true", "1")
-        self.log_file_size = int(os.getenv("LOG_FILE_SIZE", self.log_file_size))
-        self.log_file_count = int(os.getenv("LOG_FILE_COUNT", self.log_file_count))
-        self.log_exception = os.getenv("LOG_EXCEPTION", str(self.log_exception)).lower() in ("true", "1")
-        self.log_exception_format = os.getenv("LOG_EXCEPTION_FORMAT", self.log_exception_format)
-        self.log_exception_file = os.getenv("LOG_EXCEPTION_FILE", self.log_exception_file)
-        self.log_exception_rotation = os.getenv("LOG_EXCEPTION_ROTATION", self.log_exception_rotation)
-        self.log_exception_retention = os.getenv("LOG_EXCEPTION_RETENTION", self.log_exception_retention)
-        self.log_exception_compression = os.getenv("LOG_EXCEPTION_COMPRESSION", str(self.log_exception_compression)).lower() in ("true", "1")
-        self.log_exception_backtrace = os.getenv("LOG_EXCEPTION_BACKTRACE", str(self.log_exception_backtrace)).lower() in ("true", "1")
-        self.log_exception_color = os.getenv("LOG_EXCEPTION_COLOR", str(self.log_exception_color)).lower() in ("true", "1")
-        self.log_exception_json = os.getenv("LOG_EXCEPTION_JSON", str(self.log_exception_json)).lower() in ("true", "1")
-        self.log_exception_console = os.getenv("LOG_EXCEPTION_CONSOLE", str(self.log_exception_console)).lower() in ("true", "1")
-        self.log_exception_file_size = int(os.getenv("LOG_EXCEPTION_FILE_SIZE", self.log_exception_file_size))
-        self.log_exception_file_count = int(os.getenv("LOG_EXCEPTION_FILE_COUNT", self.log_exception_file_count))
-        self.log_exception_level = os.getenv("LOG_EXCEPTION_LEVEL", self.log_exception_level)
-        
-        self.environment = os.getenv("ENVIRONMENT", self.environment)
-        
+    # Security Settings
+    secret_key: str = Field(default="your-super-secret-key-change-this-in-production", description="Secret key for signing")
+    algorithm: str = Field(default="HS256", description="JWT algorithm")
+    access_token_expire_minutes: int = Field(default=30, description="Access token expiration in minutes")
+    
+    # JWT Settings
+    jwt_secret_key: Optional[str] = Field(default=None, description="JWT secret key")
+    jwt_algorithm: str = Field(default="HS256", description="JWT algorithm")
+    jwt_access_token_expire_minutes: int = Field(default=30, description="JWT access token expiration")
+    jwt_refresh_token_expire_days: int = Field(default=7, description="JWT refresh token expiration")
+    
+    # CORS Settings
+    allow_origins: str = Field(default="*", description="Allowed origins for CORS (comma-separated)")
+    allow_credentials: bool = Field(default=True, description="Allow credentials for CORS")
+    allow_methods: str = Field(default="*", description="Allowed methods for CORS (comma-separated)")
+    allow_headers: str = Field(default="*", description="Allowed headers for CORS (comma-separated)")
+    
+    # Trusted Hosts
+    trusted_hosts: str = Field(default="localhost,127.0.0.1,*.localhost", description="Trusted hosts (comma-separated)")
+    
+    # Database Configuration
+    database_url: str = Field(default="sqlite:///./auth.db", description="Database URL")
+    database_echo: bool = Field(default=False, description="Echo SQL queries")
+    database_pool_size: int = Field(default=5, description="Database connection pool size")
+    database_max_overflow: int = Field(default=10, description="Database max overflow connections")
+    database_check_same_thread: bool = Field(default=False, description="SQLite check same thread")
+    
+    # Logging Configuration
+    log_level: str = Field(default="INFO", description="Logging level")
+    log_format: str = Field(default="%(asctime)s - %(name)s - %(levelname)s - %(message)s", description="Log format")
+    log_file: str = Field(default="logs/app.log", description="Log file path")
+    log_rotation: str = Field(default="1 day", description="Log rotation")
+    log_retention: str = Field(default="7 days", description="Log retention")
+    log_compression: bool = Field(default=True, description="Enable log compression")
+    log_backtrace: bool = Field(default=True, description="Enable log backtrace")
+    log_color: bool = Field(default=True, description="Enable colored logs")
+    log_json: bool = Field(default=False, description="Enable JSON logging")
+    log_console: bool = Field(default=True, description="Enable console logging")
+    log_file_size: int = Field(default=10 * 1024 * 1024, description="Log file size limit")
+    log_file_count: int = Field(default=5, description="Number of log files to keep")
+    
+    # Exception Logging
+    log_exception: bool = Field(default=True, description="Enable exception logging")
+    log_exception_format: str = Field(default="%(asctime)s - %(name)s - %(levelname)s - %(message)s", description="Exception log format")
+    log_exception_file: str = Field(default="logs/exception.log", description="Exception log file")
+    log_exception_rotation: str = Field(default="1 day", description="Exception log rotation")
+    log_exception_retention: str = Field(default="7 days", description="Exception log retention")
+    log_exception_compression: bool = Field(default=True, description="Enable exception log compression")
+    log_exception_backtrace: bool = Field(default=True, description="Enable exception backtrace")
+    log_exception_color: bool = Field(default=True, description="Enable colored exception logs")
+    log_exception_json: bool = Field(default=False, description="Enable JSON exception logging")
+    log_exception_console: bool = Field(default=True, description="Enable console exception logging")
+    log_exception_file_size: int = Field(default=10 * 1024 * 1024, description="Exception log file size")
+    log_exception_file_count: int = Field(default=5, description="Exception log file count")
+    log_exception_level: str = Field(default="ERROR", description="Exception log level")
+    
+    # Email Configuration
+    smtp_host: Optional[str] = Field(default=None, description="SMTP server host")
+    smtp_port: int = Field(default=587, description="SMTP server port")
+    smtp_username: Optional[str] = Field(default=None, description="SMTP username")
+    smtp_password: Optional[str] = Field(default=None, description="SMTP password")
+    smtp_from_email: Optional[str] = Field(default=None, description="SMTP from email")
+    smtp_from_name: Optional[str] = Field(default=None, description="SMTP from name")
+    smtp_use_tls: bool = Field(default=True, description="Use TLS for SMTP")
+    
+    # Redis Configuration
+    redis_url: Optional[str] = Field(default=None, description="Redis connection URL")
+    redis_password: Optional[str] = Field(default=None, description="Redis password")
+    redis_db: int = Field(default=0, description="Redis database number")
+    
+    # Rate Limiting
+    rate_limit_enabled: bool = Field(default=True, description="Enable rate limiting")
+    rate_limit_requests_per_minute: int = Field(default=100, description="Requests per minute limit")
+    rate_limit_burst: int = Field(default=20, description="Burst limit")
+    
+    # Password Policy
+    password_min_length: int = Field(default=8, description="Minimum password length")
+    password_require_uppercase: bool = Field(default=True, description="Require uppercase in password")
+    password_require_lowercase: bool = Field(default=True, description="Require lowercase in password")
+    password_require_numbers: bool = Field(default=True, description="Require numbers in password")
+    password_require_special_chars: bool = Field(default=True, description="Require special characters in password")
+    
+    # Monitoring
+    sentry_dsn: Optional[str] = Field(default=None, description="Sentry DSN for error tracking")
+    prometheus_enabled: bool = Field(default=False, description="Enable Prometheus metrics")
+    metrics_endpoint: str = Field(default="/metrics", description="Metrics endpoint path")
+    
+    @field_validator('jwt_secret_key', mode='before')
+    @classmethod
+    def set_jwt_secret_key(cls, v: Any, info) -> str:
+        """Set JWT secret key from secret_key if not provided"""
+        if v is None and info.data:
+            return info.data.get('secret_key', 'default-secret-key')
+        return v or 'default-secret-key'
+    
+    @field_validator('smtp_from_name', mode='before')
+    @classmethod
+    def set_smtp_from_name(cls, v: Any, info) -> str:
+        """Set SMTP from name from app_name if not provided"""
+        if v is None and info.data:
+            return info.data.get('app_name', 'Auth Service')
+        return v or 'Auth Service'
+    
+    def get_allow_origins_list(self) -> List[str]:
+        """Get allow_origins as a list"""
+        if isinstance(self.allow_origins, str):
+            return [origin.strip() for origin in self.allow_origins.split(',') if origin.strip()]
+        return self.allow_origins if isinstance(self.allow_origins, list) else [self.allow_origins]
+    
+    def get_allow_methods_list(self) -> List[str]:
+        """Get allow_methods as a list"""
+        if isinstance(self.allow_methods, str):
+            return [method.strip() for method in self.allow_methods.split(',') if method.strip()]
+        return self.allow_methods if isinstance(self.allow_methods, list) else [self.allow_methods]
+    
+    def get_allow_headers_list(self) -> List[str]:
+        """Get allow_headers as a list"""
+        if isinstance(self.allow_headers, str):
+            return [header.strip() for header in self.allow_headers.split(',') if header.strip()]
+        return self.allow_headers if isinstance(self.allow_headers, list) else [self.allow_headers]
+    
+    def get_trusted_hosts_list(self) -> List[str]:
+        """Get trusted_hosts as a list"""
+        if isinstance(self.trusted_hosts, str):
+            return [host.strip() for host in self.trusted_hosts.split(',') if host.strip()]
+        return self.trusted_hosts if isinstance(self.trusted_hosts, list) else [self.trusted_hosts]
+    
+    class Config:
+        env_file = ".env"
+        env_file_encoding = "utf-8"
+        case_sensitive = False
+
+# Create settings instance
 settings = Settings()

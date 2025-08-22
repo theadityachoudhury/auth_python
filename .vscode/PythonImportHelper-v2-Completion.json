@@ -1,0 +1,670 @@
+[
+    {
+        "label": "settings",
+        "importPath": "app.config.settings",
+        "description": "app.config.settings",
+        "isExtraImport": true,
+        "detail": "app.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "app.config.settings",
+        "description": "app.config.settings",
+        "isExtraImport": true,
+        "detail": "app.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "app.config.settings",
+        "description": "app.config.settings",
+        "isExtraImport": true,
+        "detail": "app.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "BaseSettings",
+        "importPath": "pydantic_settings",
+        "description": "pydantic_settings",
+        "isExtraImport": true,
+        "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "field_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "ContextVar",
+        "importPath": "contextvars",
+        "description": "contextvars",
+        "isExtraImport": true,
+        "detail": "contextvars",
+        "documentation": {}
+    },
+    {
+        "label": "traceback",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "traceback",
+        "description": "traceback",
+        "detail": "traceback",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "BaseHTTPMiddleware",
+        "importPath": "starlette.middleware.base",
+        "description": "starlette.middleware.base",
+        "isExtraImport": true,
+        "detail": "starlette.middleware.base",
+        "documentation": {}
+    },
+    {
+        "label": "startup_event",
+        "importPath": "app.events.startup",
+        "description": "app.events.startup",
+        "isExtraImport": true,
+        "detail": "app.events.startup",
+        "documentation": {}
+    },
+    {
+        "label": "shutdown_event",
+        "importPath": "app.events.shutdown",
+        "description": "app.events.shutdown",
+        "isExtraImport": true,
+        "detail": "app.events.shutdown",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logging",
+        "importPath": "app.utils.logger.setup",
+        "description": "app.utils.logger.setup",
+        "isExtraImport": true,
+        "detail": "app.utils.logger.setup",
+        "documentation": {}
+    },
+    {
+        "label": "add_logging_middleware",
+        "importPath": "app.utils.logger.setup",
+        "description": "app.utils.logger.setup",
+        "isExtraImport": true,
+        "detail": "app.utils.logger.setup",
+        "documentation": {}
+    },
+    {
+        "label": "api_router",
+        "importPath": "app.routes.routes",
+        "description": "app.routes.routes",
+        "isExtraImport": true,
+        "detail": "app.routes.routes",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "app.main",
+        "description": "app.main",
+        "isExtraImport": true,
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "uvicorn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uvicorn",
+        "description": "uvicorn",
+        "detail": "uvicorn",
+        "documentation": {}
+    },
+    {
+        "label": "get_cors_config",
+        "kind": 2,
+        "importPath": "app.config.config_utils",
+        "description": "app.config.config_utils",
+        "peekOfCode": "def get_cors_config() -> Dict[str, Any]:\n    \"\"\"Get CORS configuration for FastAPI\"\"\"\n    return {\n        \"allow_origins\": settings.get_allow_origins_list(),\n        \"allow_credentials\": settings.allow_credentials,\n        \"allow_methods\": settings.get_allow_methods_list(),\n        \"allow_headers\": settings.get_allow_headers_list(),\n    }\ndef get_trusted_hosts() -> List[str]:\n    \"\"\"Get trusted hosts for FastAPI\"\"\"",
+        "detail": "app.config.config_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_trusted_hosts",
+        "kind": 2,
+        "importPath": "app.config.config_utils",
+        "description": "app.config.config_utils",
+        "peekOfCode": "def get_trusted_hosts() -> List[str]:\n    \"\"\"Get trusted hosts for FastAPI\"\"\"\n    return settings.get_trusted_hosts_list()\ndef get_database_config() -> Dict[str, Any]:\n    \"\"\"Get database configuration\"\"\"\n    return {\n        \"url\": settings.database_url,\n        \"echo\": settings.database_echo,\n        \"pool_size\": settings.database_pool_size,\n        \"max_overflow\": settings.database_max_overflow,",
+        "detail": "app.config.config_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_database_config",
+        "kind": 2,
+        "importPath": "app.config.config_utils",
+        "description": "app.config.config_utils",
+        "peekOfCode": "def get_database_config() -> Dict[str, Any]:\n    \"\"\"Get database configuration\"\"\"\n    return {\n        \"url\": settings.database_url,\n        \"echo\": settings.database_echo,\n        \"pool_size\": settings.database_pool_size,\n        \"max_overflow\": settings.database_max_overflow,\n        \"connect_args\": {\"check_same_thread\": settings.database_check_same_thread} if \"sqlite\" in settings.database_url else {}\n    }\ndef get_jwt_config() -> Dict[str, Any]:",
+        "detail": "app.config.config_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_jwt_config",
+        "kind": 2,
+        "importPath": "app.config.config_utils",
+        "description": "app.config.config_utils",
+        "peekOfCode": "def get_jwt_config() -> Dict[str, Any]:\n    \"\"\"Get JWT configuration\"\"\"\n    return {\n        \"secret_key\": settings.jwt_secret_key or settings.secret_key,\n        \"algorithm\": settings.jwt_algorithm,\n        \"access_token_expire_minutes\": settings.jwt_access_token_expire_minutes,\n        \"refresh_token_expire_days\": settings.jwt_refresh_token_expire_days,\n    }\ndef get_logging_config() -> Dict[str, Any]:\n    \"\"\"Get logging configuration for Loguru\"\"\"",
+        "detail": "app.config.config_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_logging_config",
+        "kind": 2,
+        "importPath": "app.config.config_utils",
+        "description": "app.config.config_utils",
+        "peekOfCode": "def get_logging_config() -> Dict[str, Any]:\n    \"\"\"Get logging configuration for Loguru\"\"\"\n    return {\n        \"level\": settings.log_level,\n        \"format\": settings.log_format,\n        \"rotation\": settings.log_rotation,\n        \"retention\": settings.log_retention,\n        \"compression\": settings.log_compression,\n        \"backtrace\": settings.log_backtrace,\n        \"colorize\": settings.log_color,",
+        "detail": "app.config.config_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_server_config",
+        "kind": 2,
+        "importPath": "app.config.config_utils",
+        "description": "app.config.config_utils",
+        "peekOfCode": "def get_server_config() -> Dict[str, Any]:\n    \"\"\"Get server configuration for Uvicorn\"\"\"\n    return {\n        \"host\": settings.host,\n        \"port\": settings.port,\n        \"reload\": settings.reload and settings.debug,\n        \"debug\": settings.debug,\n        \"log_level\": settings.log_level.lower(),\n    }\ndef is_production() -> bool:",
+        "detail": "app.config.config_utils",
+        "documentation": {}
+    },
+    {
+        "label": "is_production",
+        "kind": 2,
+        "importPath": "app.config.config_utils",
+        "description": "app.config.config_utils",
+        "peekOfCode": "def is_production() -> bool:\n    \"\"\"Check if running in production environment\"\"\"\n    return settings.environment.lower() == \"production\"\ndef is_development() -> bool:\n    \"\"\"Check if running in development environment\"\"\"\n    return settings.environment.lower() == \"development\"\ndef is_testing() -> bool:\n    \"\"\"Check if running in testing environment\"\"\"\n    return settings.environment.lower() == \"testing\"\n# Example usage in FastAPI main.py",
+        "detail": "app.config.config_utils",
+        "documentation": {}
+    },
+    {
+        "label": "is_development",
+        "kind": 2,
+        "importPath": "app.config.config_utils",
+        "description": "app.config.config_utils",
+        "peekOfCode": "def is_development() -> bool:\n    \"\"\"Check if running in development environment\"\"\"\n    return settings.environment.lower() == \"development\"\ndef is_testing() -> bool:\n    \"\"\"Check if running in testing environment\"\"\"\n    return settings.environment.lower() == \"testing\"\n# Example usage in FastAPI main.py\ndef get_app_metadata() -> Dict[str, Any]:\n    \"\"\"Get application metadata for FastAPI\"\"\"\n    return {",
+        "detail": "app.config.config_utils",
+        "documentation": {}
+    },
+    {
+        "label": "is_testing",
+        "kind": 2,
+        "importPath": "app.config.config_utils",
+        "description": "app.config.config_utils",
+        "peekOfCode": "def is_testing() -> bool:\n    \"\"\"Check if running in testing environment\"\"\"\n    return settings.environment.lower() == \"testing\"\n# Example usage in FastAPI main.py\ndef get_app_metadata() -> Dict[str, Any]:\n    \"\"\"Get application metadata for FastAPI\"\"\"\n    return {\n        \"title\": settings.app_name,\n        \"description\": settings.app_description,\n        \"version\": settings.app_version,",
+        "detail": "app.config.config_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_app_metadata",
+        "kind": 2,
+        "importPath": "app.config.config_utils",
+        "description": "app.config.config_utils",
+        "peekOfCode": "def get_app_metadata() -> Dict[str, Any]:\n    \"\"\"Get application metadata for FastAPI\"\"\"\n    return {\n        \"title\": settings.app_name,\n        \"description\": settings.app_description,\n        \"version\": settings.app_version,\n        \"contact\": {\n            \"name\": settings.app_author,\n            \"url\": settings.app_contact,\n            \"email\": settings.app_contact_email,",
+        "detail": "app.config.config_utils",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "kind": 6,
+        "importPath": "app.config.settings",
+        "description": "app.config.settings",
+        "peekOfCode": "class Settings(BaseSettings):\n    \"\"\"Configuration settings for the application.\"\"\"\n    # Application Settings\n    app_name: str = Field(default=\"Auth Service\", description=\"Application name\")\n    app_description: str = Field(default=\"FastAPI Authentication and Authorization Service\", description=\"Application description\")\n    app_version: str = Field(default=\"1.0.0\", description=\"Application version\")\n    app_author: str = Field(default=\"Aditya Choudhury\", description=\"Application author\")\n    app_license: str = Field(default=\"MIT\", description=\"Application license\")\n    app_contact: str = Field(default=\"\", description=\"Contact URL\")\n    app_contact_email: str = Field(default=\"\", description=\"Contact email\")",
+        "detail": "app.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "kind": 5,
+        "importPath": "app.config.settings",
+        "description": "app.config.settings",
+        "peekOfCode": "settings = Settings()",
+        "detail": "app.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "auth_router",
+        "kind": 5,
+        "importPath": "app.routes.authRouter",
+        "description": "app.routes.authRouter",
+        "peekOfCode": "auth_router = APIRouter(\n    prefix=\"/auth\", \n    tags=[\"auth\"]\n)\n@auth_router.get(\"/login\")\nasync def login():\n    \"\"\"\n    Endpoint for user login.\n    \"\"\"\n    return {\"message\": \"Login endpoint\"}",
+        "detail": "app.routes.authRouter",
+        "documentation": {}
+    },
+    {
+        "label": "api_router",
+        "kind": 5,
+        "importPath": "app.routes.routes",
+        "description": "app.routes.routes",
+        "peekOfCode": "api_router = APIRouter()\napi_router.include_router(auth_router, prefix=\"/v1\", tags=[\"auth\"])",
+        "detail": "app.routes.routes",
+        "documentation": {}
+    },
+    {
+        "label": "CustomFormatter",
+        "kind": 6,
+        "importPath": "app.utils.logger.logger_config",
+        "description": "app.utils.logger.logger_config",
+        "peekOfCode": "class CustomFormatter:\n    \"\"\"Custom formatter for structured logging\"\"\"\n    def __init__(self, settings, include_extra: bool = True):\n        self.settings = settings\n        self.include_extra = include_extra\n    def format(self, record)->str:\n        \"\"\"Format log record with additional context\"\"\"\n        # Get context variables\n        request_id = request_id_var.get()\n        user_id = user_id_var.get()",
+        "detail": "app.utils.logger.logger_config",
+        "documentation": {}
+    },
+    {
+        "label": "LoggerConfig",
+        "kind": 6,
+        "importPath": "app.utils.logger.logger_config",
+        "description": "app.utils.logger.logger_config",
+        "peekOfCode": "class LoggerConfig:\n    \"\"\"Production-grade logger configuration\"\"\"\n    def __init__(self, settings):\n        self.settings = settings\n        self._setup_logger()\n    def _setup_logger(self):\n        \"\"\"Setup loguru logger with production configurations\"\"\"\n        # Remove default logger\n        logger.remove()\n        # Setup console logging",
+        "detail": "app.utils.logger.logger_config",
+        "documentation": {}
+    },
+    {
+        "label": "LoggerUtils",
+        "kind": 6,
+        "importPath": "app.utils.logger.logger_config",
+        "description": "app.utils.logger.logger_config",
+        "peekOfCode": "class LoggerUtils:\n    \"\"\"Utility functions for logging\"\"\"\n    @staticmethod\n    def set_request_context(request_id: str, user_id: Optional[str] = None):\n        \"\"\"Set request context for logging\"\"\"\n        request_id_var.set(request_id)\n        if user_id:\n            user_id_var.set(user_id)\n    @staticmethod\n    def clear_request_context():",
+        "detail": "app.utils.logger.logger_config",
+        "documentation": {}
+    },
+    {
+        "label": "LoggingMiddleware",
+        "kind": 6,
+        "importPath": "app.utils.logger.middleware",
+        "description": "app.utils.logger.middleware",
+        "peekOfCode": "class LoggingMiddleware(BaseHTTPMiddleware):\n    \"\"\"Middleware for comprehensive request/response logging\"\"\"\n    def __init__(self, app, settings):\n        super().__init__(app)\n        self.settings = settings\n        self.excluded_paths = [\"/health\", \"/metrics\", \"/favicon.ico\"]\n        self.sensitive_headers = [\"authorization\", \"cookie\", \"x-api-key\"]\n    async def dispatch(self, request: Request, call_next):\n        # Skip logging for excluded paths\n        if request.url.path in self.excluded_paths:",
+        "detail": "app.utils.logger.middleware",
+        "documentation": {}
+    },
+    {
+        "label": "PerformanceMiddleware",
+        "kind": 6,
+        "importPath": "app.utils.logger.middleware",
+        "description": "app.utils.logger.middleware",
+        "peekOfCode": "class PerformanceMiddleware(BaseHTTPMiddleware):\n    \"\"\"Middleware for performance monitoring\"\"\"\n    def __init__(self, app, settings):\n        super().__init__(app)\n        self.settings = settings\n        self.slow_threshold = 1.0  # seconds\n        self.very_slow_threshold = 5.0  # seconds\n    async def dispatch(self, request: Request, call_next: Callable) -> Response:\n        start_time = time.time()\n        response = await call_next(request)",
+        "detail": "app.utils.logger.middleware",
+        "documentation": {}
+    },
+    {
+        "label": "LogPerformance",
+        "kind": 6,
+        "importPath": "app.utils.logger.setup",
+        "description": "app.utils.logger.setup",
+        "peekOfCode": "class LogPerformance:\n    \"\"\"Context manager for logging operation performance\"\"\"\n    def __init__(self, operation: str, **kwargs):\n        self.operation = operation\n        self.kwargs = kwargs\n        self.start_time = None\n    def __enter__(self):\n        self.start_time = time.time()\n        logger.debug(f\"Starting operation: {self.operation}\")\n        return self",
+        "detail": "app.utils.logger.setup",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logging",
+        "kind": 2,
+        "importPath": "app.utils.logger.setup",
+        "description": "app.utils.logger.setup",
+        "peekOfCode": "def setup_logging(settings):\n    \"\"\"Setup production logging configuration\"\"\"\n    # Initialize logger configuration\n    logger_config = LoggerConfig(settings)\n    # Log startup\n    logger.info(\n        f\"Application starting: {settings.app_name}\",\n        extra={\n            \"startup\": True,\n            \"app_name\": settings.app_name,",
+        "detail": "app.utils.logger.setup",
+        "documentation": {}
+    },
+    {
+        "label": "add_logging_middleware",
+        "kind": 2,
+        "importPath": "app.utils.logger.setup",
+        "description": "app.utils.logger.setup",
+        "peekOfCode": "def add_logging_middleware(app, settings):\n    \"\"\"Add logging middleware to FastAPI app\"\"\"\n    app.add_middleware(LoggingMiddleware, settings=settings)\n    app.add_middleware(PerformanceMiddleware, settings=settings)\n# Context manager for performance logging\nclass LogPerformance:\n    \"\"\"Context manager for logging operation performance\"\"\"\n    def __init__(self, operation: str, **kwargs):\n        self.operation = operation\n        self.kwargs = kwargs",
+        "detail": "app.utils.logger.setup",
+        "documentation": {}
+    },
+    {
+        "label": "create_app",
+        "kind": 2,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "def create_app() -> FastAPI:\n    \"\"\"\n    Create and configure the FastAPI application.\n    \"\"\"\n    app = FastAPI(\n        title=Settings.app_name,\n        description=Settings.app_description,\n        version=Settings.app_version,\n        openapi_url=\"/api/v1/openapi.json\",\n        docs_url=\"/api/docs\",",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "app = create_app()",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "__all__",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "__all__ = [\"app\"]",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "test_configuration",
+        "kind": 2,
+        "importPath": "test_config",
+        "description": "test_config",
+        "peekOfCode": "def test_configuration():\n    \"\"\"Test the configuration settings\"\"\"\n    try:\n        from app.config.settings import settings\n        print(\"🔧 Configuration Test Results\")\n        print(\"=\" * 50)\n        # Application Settings\n        print(f\"📱 App Name: {settings.app_name}\")\n        print(f\"📝 App Description: {settings.app_description}\")\n        print(f\"🏷️  App Version: {settings.app_version}\")",
+        "detail": "test_config",
+        "documentation": {}
+    },
+    {
+        "label": "check_env_file",
+        "kind": 2,
+        "importPath": "test_config",
+        "description": "test_config",
+        "peekOfCode": "def check_env_file():\n    \"\"\"Check if .env file exists and has required variables\"\"\"\n    env_path = Path(\".env\")\n    if not env_path.exists():\n        print(\"⚠️  .env file not found - using default values\")\n        return False\n    print(\"✅ .env file found\")\n    required_vars = [\n        \"SECRET_KEY\",\n        \"DATABASE_URL\",",
+        "detail": "test_config",
+        "documentation": {}
+    },
+    {
+        "label": "project_root",
+        "kind": 5,
+        "importPath": "test_config",
+        "description": "test_config",
+        "peekOfCode": "project_root = Path(__file__).parent\nsys.path.insert(0, str(project_root))\ndef test_configuration():\n    \"\"\"Test the configuration settings\"\"\"\n    try:\n        from app.config.settings import settings\n        print(\"🔧 Configuration Test Results\")\n        print(\"=\" * 50)\n        # Application Settings\n        print(f\"📱 App Name: {settings.app_name}\")",
+        "detail": "test_config",
+        "documentation": {}
+    }
+]
