@@ -12,7 +12,7 @@ class Settings:
     app_license: str = "MIT"
     app_contact: str = ""
     app_contact_email: str = ""
-    debug: bool = False
+    debug: bool = True
     
     # Server
     host: str = "127.0.0.1"
@@ -43,11 +43,11 @@ class Settings:
     # Logging
     log_level: str = "INFO"
     log_format: str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-    log_file: str = "app.log"
+    log_file: str = "logs/app.log"
     log_rotation: str = "1 day"
     log_retention: str = "7 days"
     log_compression: bool = True
-    log_backtrace: bool = False
+    log_backtrace: bool = True
     log_color: bool = True
     log_json: bool = False
     log_console: bool = True
@@ -55,11 +55,11 @@ class Settings:
     log_file_count: int = 5
     log_exception: bool = True
     log_exception_format: str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-    log_exception_file: str = "exception.log"
+    log_exception_file: str = "logs/exception.log"
     log_exception_rotation: str = "1 day"
     log_exception_retention: str = "7 days"
     log_exception_compression: bool = True
-    log_exception_backtrace: bool = False
+    log_exception_backtrace: bool = True
     log_exception_color: bool = True
     log_exception_json: bool = False
     log_exception_console: bool = True

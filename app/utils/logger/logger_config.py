@@ -79,17 +79,29 @@ class LoggerConfig:
         
         # Setup console logging
         if self.settings.log_console:
-            console_format = self._get_console_format()
-            logger.add(
-                sys.stdout,
-                format=console_format,
-                level=self.settings.log_level,
-                colorize=self.settings.log_color,
-                backtrace=self.settings.log_backtrace,
-                diagnose=self.settings.debug,
-                enqueue=True,  # Thread-safe logging
-                catch=True,    # Catch exceptions in logging
-            )
+            if self.settings.log_json:
+                # For JSON console output, use serialize=True and no color
+                logger.add(
+                    sys.stdout,
+                    level=self.settings.log_level,
+                    backtrace=self.settings.log_backtrace,
+                    diagnose=self.settings.debug,
+                    enqueue=True,  # Thread-safe logging
+                    catch=True,    # Catch exceptions in logging
+                    serialize=True,  # JSON format
+                )
+            else:
+                console_format = self._get_console_format()
+                logger.add(
+                    sys.stdout,
+                    format=console_format,
+                    level=self.settings.log_level,
+                    colorize=self.settings.log_color,
+                    backtrace=self.settings.log_backtrace,
+                    diagnose=self.settings.debug,
+                    enqueue=True,  # Thread-safe logging
+                    catch=True,    # Catch exceptions in logging
+                )
         
         # Setup file logging
         if self.settings.log_file:
@@ -103,11 +115,8 @@ class LoggerConfig:
         self._setup_request_logger()
     
 
-    def _get_console_format(self) -> Union[str, Callable]:
+    def _get_console_format(self) -> str:
         """Get console format based on settings"""
-        if self.settings.log_json:
-            return CustomFormatter(self.settings).format
-        
         if self.settings.log_color:
             return (
                 "<green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> | "
@@ -116,78 +125,125 @@ class LoggerConfig:
                 "<level>{message}</level>"
             )
         else:
-            return self.settings.log_format
+            # Use loguru format syntax instead of Python % formatting
+            return "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | {name}:{function}:{line} | {message}"
     
     def _setup_file_logging(self):
         """Setup file logging with rotation"""
-        file_format = (
-            CustomFormatter(self.settings).format 
-            if self.settings.log_json 
-            else self.settings.log_format
-        )
-        
         # Ensure log directory exists
         log_path = Path(self.settings.log_file)
         log_path.parent.mkdir(parents=True, exist_ok=True)
         
-        logger.add(
-            self.settings.log_file,
-            format=file_format,
-            level=self.settings.log_level,
-            rotation=self._parse_rotation(self.settings.log_rotation),
-            retention=self._parse_retention(self.settings.log_retention),
-            compression="gz" if self.settings.log_compression else None,
-            backtrace=self.settings.log_backtrace,
-            diagnose=self.settings.debug,
-            enqueue=True,
-            catch=True,
-            serialize=self.settings.log_json,
-        )
+        if self.settings.log_json:
+            # For JSON logging, we'll use serialize=True instead of custom formatter
+            logger.add(
+                self.settings.log_file,
+                level=self.settings.log_level,
+                rotation=self._parse_rotation(self.settings.log_rotation),
+                retention=self._parse_retention(self.settings.log_retention),
+                compression="gz" if self.settings.log_compression else None,
+                backtrace=self.settings.log_backtrace,
+                diagnose=self.settings.debug,
+                enqueue=True,
+                catch=True,
+                serialize=True,  # This will output JSON format
+            )
+        else:
+            # Use loguru's format string syntax for regular text format
+            file_format = "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | {name}:{function}:{line} | {message}"
+            logger.add(
+                self.settings.log_file,
+                format=file_format,
+                level=self.settings.log_level,
+                rotation=self._parse_rotation(self.settings.log_rotation),
+                retention=self._parse_retention(self.settings.log_retention),
+                compression="gz" if self.settings.log_compression else None,
+                backtrace=self.settings.log_backtrace,
+                diagnose=self.settings.debug,
+                enqueue=True,
+                catch=True,
+                serialize=False,
+            )
     
     def _setup_exception_logging(self):
         """Setup separate exception logging"""
-        exception_format = (
-            CustomFormatter(self.settings).format 
-            if self.settings.log_exception_json 
-            else self.settings.log_exception_format
-        )
-        
         # Ensure exception log directory exists
         exception_path = Path(self.settings.log_exception_file)
         exception_path.parent.mkdir(parents=True, exist_ok=True)
         
-        logger.add(
-            self.settings.log_exception_file,
-            format=exception_format,
-            level=self.settings.log_exception_level,
-            rotation=self._parse_rotation(self.settings.log_exception_rotation),
-            retention=self._parse_retention(self.settings.log_exception_retention),
-            compression="gz" if self.settings.log_exception_compression else None,
-            backtrace=self.settings.log_exception_backtrace,
-            diagnose=self.settings.debug,
-            enqueue=True,
-            catch=True,
-            serialize=self.settings.log_exception_json,
-            filter=lambda record: record["level"].no >= logger.level(self.settings.log_exception_level).no
-        )
+        if self.settings.log_exception_json:
+            # For JSON logging, use serialize=True
+            logger.add(
+                self.settings.log_exception_file,
+                level=self.settings.log_exception_level,
+                rotation=self._parse_rotation(self.settings.log_exception_rotation),
+                retention=self._parse_retention(self.settings.log_exception_retention),
+                compression="gz" if self.settings.log_exception_compression else None,
+                backtrace=self.settings.log_exception_backtrace,
+                diagnose=self.settings.debug,
+                enqueue=True,
+                catch=True,
+                serialize=True,  # JSON format
+                filter=lambda record: record["level"].no >= logger.level(self.settings.log_exception_level).no
+            )
+        else:
+            # Use loguru's format string syntax for exceptions with more detail
+            exception_format = "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | {name}:{function}:{line} | {message}"
+            logger.add(
+                self.settings.log_exception_file,
+                format=exception_format,
+                level=self.settings.log_exception_level,
+                rotation=self._parse_rotation(self.settings.log_exception_rotation),
+                retention=self._parse_retention(self.settings.log_exception_retention),
+                compression="gz" if self.settings.log_exception_compression else None,
+                backtrace=self.settings.log_exception_backtrace,
+                diagnose=self.settings.debug,
+                enqueue=True,
+                catch=True,
+                serialize=False,
+                filter=lambda record: record["level"].no >= logger.level(self.settings.log_exception_level).no
+            )
     
     def _setup_request_logger(self):
         """Setup separate request logger"""
         request_log_file = "logs/requests.log"
         Path(request_log_file).parent.mkdir(parents=True, exist_ok=True)
         
-        logger.add(
-            request_log_file,
-            format=CustomFormatter(self.settings).format if self.settings.log_json else self.settings.log_format,
-            level="INFO",
-            rotation="1 day",
-            retention="30 days",
-            compression="gz",
-            enqueue=True,
-            catch=True,
-            serialize=self.settings.log_json,
-            filter=lambda record: "request" in record["extra"]
-        )
+        # Fixed filter function - loguru wraps extra data in another 'extra' key
+        def request_filter(record):
+            extra = record.get("extra", {})
+            # Loguru wraps the extra data in another "extra" key
+            actual_extra = extra.get("extra", {})
+            return "request" in actual_extra
+        
+        if self.settings.log_json:
+            # For JSON logging, use serialize=True
+            logger.add(
+                request_log_file,
+                level="INFO",
+                rotation="1 day",
+                retention="30 days",
+                compression="gz",
+                enqueue=True,
+                catch=True,
+                serialize=True,  # JSON format
+                filter=request_filter
+            )
+        else:
+            # Use loguru's format string syntax for requests
+            request_format = "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | REQUEST | {message}"
+            logger.add(
+                request_log_file,
+                format=request_format,
+                level="INFO",
+                rotation="1 day",
+                retention="30 days",
+                compression="gz",
+                enqueue=True,
+                catch=True,
+                serialize=False,
+                filter=request_filter
+            )
     
     def _parse_rotation(self, rotation: str):
         """Parse rotation string to loguru format"""
