@@ -11,7 +11,7 @@ def create_app() -> FastAPI:
     """
     Create and configure the FastAPI application.
     """
-    app = FastAPI(
+    app: FastAPI = FastAPI(
         title=Settings.app_name,
         description=Settings.app_description,
         version=Settings.app_version,
@@ -36,6 +36,7 @@ def create_app() -> FastAPI:
     return app
 
 # Loading environment variables
+logger.info("Initializing environment variables", extra={"debug": Settings.debug})
 load_dotenv()
 
 setup_logging(Settings)

@@ -48,6 +48,46 @@
         "documentation": {}
     },
     {
+        "label": "Generator",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -57,6 +97,126 @@
     },
     {
         "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Generic",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -120,6 +280,240 @@
         "documentation": {}
     },
     {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "event",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "text",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "and_",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "or_",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "desc",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "asc",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "or_",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "DeclarativeMeta",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "DeclarativeMeta",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "StaticPool",
+        "importPath": "sqlalchemy.pool",
+        "description": "sqlalchemy.pool",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.pool",
+        "documentation": {}
+    },
+    {
+        "label": "QueuePool",
+        "importPath": "sqlalchemy.pool",
+        "description": "sqlalchemy.pool",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.pool",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemyError",
+        "importPath": "sqlalchemy.exc",
+        "description": "sqlalchemy.exc",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.exc",
+        "documentation": {}
+    },
+    {
+        "label": "DisconnectionError",
+        "importPath": "sqlalchemy.exc",
+        "description": "sqlalchemy.exc",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.exc",
+        "documentation": {}
+    },
+    {
+        "label": "contextmanager",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
         "label": "BaseSettings",
         "importPath": "pydantic_settings",
         "description": "pydantic_settings",
@@ -137,6 +531,78 @@
     },
     {
         "label": "field_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "field_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "model_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "validator",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -193,64 +659,135 @@
         "documentation": {}
     },
     {
-        "label": "shutil",
-        "kind": 6,
+        "label": "user_service",
+        "importPath": "app.services.UserService",
+        "description": "app.services.UserService",
         "isExtraImport": true,
-        "importPath": "shutil",
-        "description": "shutil",
-        "detail": "shutil",
+        "detail": "app.services.UserService",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreate",
+        "importPath": "app.schemas.user_schema",
+        "description": "app.schemas.user_schema",
+        "isExtraImport": true,
+        "detail": "app.schemas.user_schema",
+        "documentation": {}
+    },
+    {
+        "label": "UserResponse",
+        "importPath": "app.schemas.user_schema",
+        "description": "app.schemas.user_schema",
+        "isExtraImport": true,
+        "detail": "app.schemas.user_schema",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreate",
+        "importPath": "app.schemas.user_schema",
+        "description": "app.schemas.user_schema",
+        "isExtraImport": true,
+        "detail": "app.schemas.user_schema",
+        "documentation": {}
+    },
+    {
+        "label": "UserResponse",
+        "importPath": "app.schemas.user_schema",
+        "description": "app.schemas.user_schema",
+        "isExtraImport": true,
+        "detail": "app.schemas.user_schema",
         "documentation": {}
     },
     {
         "label": "logger",
-        "importPath": "loguru",
-        "description": "loguru",
+        "importPath": "app.config.database",
+        "description": "app.config.database",
         "isExtraImport": true,
-        "detail": "loguru",
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "close_db",
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "isExtraImport": true,
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "db_health_check",
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "isExtraImport": true,
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "init_db",
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "isExtraImport": true,
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "isExtraImport": true,
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db_context",
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "isExtraImport": true,
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db_context",
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "isExtraImport": true,
+        "detail": "app.config.database",
         "documentation": {}
     },
     {
         "label": "logger",
-        "importPath": "loguru",
-        "description": "loguru",
+        "importPath": "app.config.database",
+        "description": "app.config.database",
         "isExtraImport": true,
-        "detail": "loguru",
+        "detail": "app.config.database",
         "documentation": {}
     },
     {
-        "label": "logger",
-        "importPath": "loguru",
-        "description": "loguru",
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
         "isExtraImport": true,
-        "detail": "loguru",
+        "detail": "fastapi",
         "documentation": {}
     },
     {
-        "label": "logger",
-        "importPath": "loguru",
-        "description": "loguru",
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
         "isExtraImport": true,
-        "detail": "loguru",
-        "documentation": {}
-    },
-    {
-        "label": "logger",
-        "importPath": "loguru",
-        "description": "loguru",
-        "isExtraImport": true,
-        "detail": "loguru",
-        "documentation": {}
-    },
-    {
-        "label": "logger",
-        "importPath": "loguru",
-        "description": "loguru",
-        "isExtraImport": true,
-        "detail": "loguru",
+        "detail": "fastapi",
         "documentation": {}
     },
     {
         "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -290,6 +827,231 @@
         "documentation": {}
     },
     {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
+        "label": "cleanup_pycache",
+        "importPath": "app.utils.pycache_cleanup",
+        "description": "app.utils.pycache_cleanup",
+        "isExtraImport": true,
+        "detail": "app.utils.pycache_cleanup",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "isExtraImport": true,
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "isExtraImport": true,
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "isExtraImport": true,
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "BaseRepository",
+        "importPath": "app.repositories.base_repository",
+        "description": "app.repositories.base_repository",
+        "isExtraImport": true,
+        "detail": "app.repositories.base_repository",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreate",
+        "importPath": "app.schemas.users",
+        "description": "app.schemas.users",
+        "isExtraImport": true,
+        "detail": "app.schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "UserResponse",
+        "importPath": "app.schemas.users",
+        "description": "app.schemas.users",
+        "isExtraImport": true,
+        "detail": "app.schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "user_controller",
+        "importPath": "app.controllers.user_controller",
+        "description": "app.controllers.user_controller",
+        "isExtraImport": true,
+        "detail": "app.controllers.user_controller",
+        "documentation": {}
+    },
+    {
+        "label": "UserValidators",
+        "importPath": "app.schemas.validators",
+        "description": "app.schemas.validators",
+        "isExtraImport": true,
+        "detail": "app.schemas.validators",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "CryptContext",
+        "importPath": "passlib.context",
+        "description": "passlib.context",
+        "isExtraImport": true,
+        "detail": "passlib.context",
+        "documentation": {}
+    },
+    {
+        "label": "user_repository",
+        "importPath": "app.repositories.user_repository",
+        "description": "app.repositories.user_repository",
+        "isExtraImport": true,
+        "detail": "app.repositories.user_repository",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -305,15 +1067,6 @@
         "importPath": "json",
         "description": "json",
         "detail": "json",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
         "documentation": {}
     },
     {
@@ -348,6 +1101,15 @@
         "description": "starlette.middleware.base",
         "isExtraImport": true,
         "detail": "starlette.middleware.base",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
         "documentation": {}
     },
     {
@@ -506,6 +1268,105 @@
         "documentation": {}
     },
     {
+        "label": "DatabaseManager",
+        "kind": 6,
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "peekOfCode": "class DatabaseManager:\n    \"\"\"Enhanced database manager with connection pooling, health checks, and error handling.\"\"\"\n    def __init__(self):\n        self._engine: Optional[Engine] = None\n        self._session_factory: Optional[sessionmaker] = None\n        self._base: Optional[Type[DeclarativeMeta]] = None\n        self._is_initialized = False\n        self._connection_retry_attempts = 3\n        self._connection_retry_delay = 1.0\n    @property",
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "kind": 2,
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "peekOfCode": "def get_db() -> Generator[Session, None, None]:\n    \"\"\"\n    Dependency function to get database session.\n    Used with FastAPI's Depends() for automatic session management.\n    \"\"\"\n    session = db_manager.get_session()\n    try:\n        yield session\n    except SQLAlchemyError as e:\n        session.rollback()",
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db_context",
+        "kind": 2,
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "peekOfCode": "def get_db_context():\n    \"\"\"Get database session context manager for manual session management.\"\"\"\n    return db_manager.get_session_context()\ndef init_db():\n    \"\"\"Initialize database and create tables.\"\"\"\n    try:\n        db_manager.create_tables()\n        logger.info(\"Database initialized successfully\")\n    except Exception as e:\n        logger.error(f\"Database initialization failed: {e}\")",
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "init_db",
+        "kind": 2,
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "peekOfCode": "def init_db():\n    \"\"\"Initialize database and create tables.\"\"\"\n    try:\n        db_manager.create_tables()\n        logger.info(\"Database initialized successfully\")\n    except Exception as e:\n        logger.error(f\"Database initialization failed: {e}\")\n        raise\ndef close_db():\n    \"\"\"Close database connections.\"\"\"",
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "close_db",
+        "kind": 2,
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "peekOfCode": "def close_db():\n    \"\"\"Close database connections.\"\"\"\n    db_manager.close()\ndef db_health_check() -> Dict[str, Any]:\n    \"\"\"Get database health status.\"\"\"\n    return db_manager.health_check()",
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "db_health_check",
+        "kind": 2,
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "peekOfCode": "def db_health_check() -> Dict[str, Any]:\n    \"\"\"Get database health status.\"\"\"\n    return db_manager.health_check()",
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass DatabaseManager:\n    \"\"\"Enhanced database manager with connection pooling, health checks, and error handling.\"\"\"\n    def __init__(self):\n        self._engine: Optional[Engine] = None\n        self._session_factory: Optional[sessionmaker] = None\n        self._base: Optional[Type[DeclarativeMeta]] = None\n        self._is_initialized = False\n        self._connection_retry_attempts = 3\n        self._connection_retry_delay = 1.0",
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "db_manager",
+        "kind": 5,
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "peekOfCode": "db_manager = DatabaseManager()\n# Backward compatibility - expose traditional objects\nengine = db_manager.engine\nSessionLocal = db_manager.session_factory\nBase = db_manager.base\ndef get_db() -> Generator[Session, None, None]:\n    \"\"\"\n    Dependency function to get database session.\n    Used with FastAPI's Depends() for automatic session management.\n    \"\"\"",
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "peekOfCode": "engine = db_manager.engine\nSessionLocal = db_manager.session_factory\nBase = db_manager.base\ndef get_db() -> Generator[Session, None, None]:\n    \"\"\"\n    Dependency function to get database session.\n    Used with FastAPI's Depends() for automatic session management.\n    \"\"\"\n    session = db_manager.get_session()\n    try:",
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "SessionLocal",
+        "kind": 5,
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "peekOfCode": "SessionLocal = db_manager.session_factory\nBase = db_manager.base\ndef get_db() -> Generator[Session, None, None]:\n    \"\"\"\n    Dependency function to get database session.\n    Used with FastAPI's Depends() for automatic session management.\n    \"\"\"\n    session = db_manager.get_session()\n    try:\n        yield session",
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "app.config.database",
+        "description": "app.config.database",
+        "peekOfCode": "Base = db_manager.base\ndef get_db() -> Generator[Session, None, None]:\n    \"\"\"\n    Dependency function to get database session.\n    Used with FastAPI's Depends() for automatic session management.\n    \"\"\"\n    session = db_manager.get_session()\n    try:\n        yield session\n    except SQLAlchemyError as e:",
+        "detail": "app.config.database",
+        "documentation": {}
+    },
+    {
         "label": "Settings",
         "kind": 6,
         "importPath": "app.config.settings",
@@ -524,11 +1385,83 @@
         "documentation": {}
     },
     {
+        "label": "UserController",
+        "kind": 6,
+        "importPath": "app.controllers.user_controller",
+        "description": "app.controllers.user_controller",
+        "peekOfCode": "class UserController:\n    \"\"\"Controller layer for handling user-related HTTP requests and responses.\"\"\"\n    def __init__(self):\n        self.user_service = user_service\n    async def create_user(self, user_data: UserCreate) -> UserResponse:\n        \"\"\"Handle user creation request.\"\"\"\n        try:\n            return self.user_service.create_user(user_data)\n        except ValueError as e:\n            logger.warning(f\"User creation validation error: {str(e)}\")",
+        "detail": "app.controllers.user_controller",
+        "documentation": {}
+    },
+    {
+        "label": "user_controller",
+        "kind": 5,
+        "importPath": "app.controllers.user_controller",
+        "description": "app.controllers.user_controller",
+        "peekOfCode": "user_controller = UserController()",
+        "detail": "app.controllers.user_controller",
+        "documentation": {}
+    },
+    {
+        "label": "UserRole",
+        "kind": 6,
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "peekOfCode": "class UserRole(str, Enum):\n    \"\"\"User roles enumeration.\"\"\"\n    ADMIN = \"admin\"\n    MODERATOR = \"moderator\"\n    USER = \"user\"\nclass User(Base):\n    \"\"\"User model for storing user account information.\"\"\"\n    __tablename__ = \"users\"\n    # Primary key\n    id = Column(Integer, primary_key=True, index=True, autoincrement=True)",
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "peekOfCode": "class User(Base):\n    \"\"\"User model for storing user account information.\"\"\"\n    __tablename__ = \"users\"\n    # Primary key\n    id = Column(Integer, primary_key=True, index=True, autoincrement=True)\n    # Basic user information\n    email = Column(\n        String(255), \n        unique=True, \n        index=True, ",
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "BaseRepository",
+        "kind": 6,
+        "importPath": "app.repositories.base_repository",
+        "description": "app.repositories.base_repository",
+        "peekOfCode": "class BaseRepository(Generic[ModelType], ABC):\n    \"\"\"Base repository class with common CRUD operations.\"\"\"\n    def __init__(self, model: type[ModelType]):\n        self.model = model\n    def get_by_id(self, id: Any) -> Optional[ModelType]:\n        \"\"\"Get a single record by ID.\"\"\"\n        with get_db_context() as session:\n            return session.query(self.model).filter(getattr(self.model, \"id\") == id).first()\n    def get_all(\n        self, ",
+        "detail": "app.repositories.base_repository",
+        "documentation": {}
+    },
+    {
+        "label": "ModelType",
+        "kind": 5,
+        "importPath": "app.repositories.base_repository",
+        "description": "app.repositories.base_repository",
+        "peekOfCode": "ModelType = TypeVar(\"ModelType\", bound=DeclarativeMeta)\nclass BaseRepository(Generic[ModelType], ABC):\n    \"\"\"Base repository class with common CRUD operations.\"\"\"\n    def __init__(self, model: type[ModelType]):\n        self.model = model\n    def get_by_id(self, id: Any) -> Optional[ModelType]:\n        \"\"\"Get a single record by ID.\"\"\"\n        with get_db_context() as session:\n            return session.query(self.model).filter(getattr(self.model, \"id\") == id).first()\n    def get_all(",
+        "detail": "app.repositories.base_repository",
+        "documentation": {}
+    },
+    {
+        "label": "UserRepository",
+        "kind": 6,
+        "importPath": "app.repositories.user_repository",
+        "description": "app.repositories.user_repository",
+        "peekOfCode": "class UserRepository(BaseRepository[User]):\n    \"\"\"Repository for User model with specific user-related database operations.\"\"\"\n    def __init__(self):\n        super().__init__(User)\n    def get_by_email(self, email: str) -> Optional[User]:\n        \"\"\"Get user by email address.\"\"\"\n        return self.get_by_field(\"email\", email)\n    def get_by_username(self, username: str) -> Optional[User]:\n        \"\"\"Get user by username.\"\"\"\n        return self.get_by_field(\"username\", username)",
+        "detail": "app.repositories.user_repository",
+        "documentation": {}
+    },
+    {
+        "label": "user_repository",
+        "kind": 5,
+        "importPath": "app.repositories.user_repository",
+        "description": "app.repositories.user_repository",
+        "peekOfCode": "user_repository = UserRepository()",
+        "detail": "app.repositories.user_repository",
+        "documentation": {}
+    },
+    {
         "label": "auth_router",
         "kind": 5,
         "importPath": "app.routes.authRouter",
         "description": "app.routes.authRouter",
-        "peekOfCode": "auth_router = APIRouter(\n    prefix=\"/auth\", \n    tags=[\"auth\"]\n)\n@auth_router.get(\"/login\")\nasync def login():\n    \"\"\"\n    Endpoint for user login.\n    \"\"\"\n    return {\"message\": \"Login endpoint\"}",
+        "peekOfCode": "auth_router = APIRouter(\n    prefix=\"/auth\", \n    tags=[\"auth\"]\n)\n@auth_router.post(\"/\",\n    response_model=UserResponse,\n    status_code=status.HTTP_201_CREATED,\n    summary=\"Create a new user\",\n    description=\"Create a new user account with the provided information.\")\nasync def create_user(user_data: UserCreate):",
         "detail": "app.routes.authRouter",
         "documentation": {}
     },
@@ -539,6 +1472,195 @@
         "description": "app.routes.routes",
         "peekOfCode": "api_router = APIRouter()\napi_router.include_router(auth_router, prefix=\"/v1\", tags=[\"auth\"])",
         "detail": "app.routes.routes",
+        "documentation": {}
+    },
+    {
+        "label": "UserRole",
+        "kind": 6,
+        "importPath": "app.schemas.users",
+        "description": "app.schemas.users",
+        "peekOfCode": "class UserRole(str, Enum):\n    ADMIN = \"admin\",\n    MODERATOR = \"moderator\",\n    USER = \"user\"\nclass Gender(str, Enum):\n    MALE = \"male\",\n    FEMALE = \"female\",\n    OTHER = \"other\",\n    PREFER_NOT_TO_SAY = \"prefer_not_to_say\"\nclass UserStatus(str, Enum):",
+        "detail": "app.schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "Gender",
+        "kind": 6,
+        "importPath": "app.schemas.users",
+        "description": "app.schemas.users",
+        "peekOfCode": "class Gender(str, Enum):\n    MALE = \"male\",\n    FEMALE = \"female\",\n    OTHER = \"other\",\n    PREFER_NOT_TO_SAY = \"prefer_not_to_say\"\nclass UserStatus(str, Enum):\n    ACTIVE = \"active\",\n    INACTIVE = \"inactive\",\n    SUSPENDED = \"suspended\",\n    PENDING_VERIFICATION = \"pending_verification\"",
+        "detail": "app.schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "UserStatus",
+        "kind": 6,
+        "importPath": "app.schemas.users",
+        "description": "app.schemas.users",
+        "peekOfCode": "class UserStatus(str, Enum):\n    ACTIVE = \"active\",\n    INACTIVE = \"inactive\",\n    SUSPENDED = \"suspended\",\n    PENDING_VERIFICATION = \"pending_verification\"\nclass UserBase(BaseModel):\n    user_id: Optional[str] = Field(\n        None,\n        description=\"Unique identifier for a user\"\n    )",
+        "detail": "app.schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "UserBase",
+        "kind": 6,
+        "importPath": "app.schemas.users",
+        "description": "app.schemas.users",
+        "peekOfCode": "class UserBase(BaseModel):\n    user_id: Optional[str] = Field(\n        None,\n        description=\"Unique identifier for a user\"\n    )\n    email: EmailStr = Field(\n        ..., \n        description=\"User's email address\"\n    )\n    username: Optional[str] = Field(",
+        "detail": "app.schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreate",
+        "kind": 6,
+        "importPath": "app.schemas.users",
+        "description": "app.schemas.users",
+        "peekOfCode": "class UserCreate(UserBase):\n    role: UserRole = Field(\n        default=UserRole.USER,\n        description=\"Role of the user\"\n    )\nclass UserLogin(BaseModel):\n    email: Optional[EmailStr] = Field(\n        None,\n        description=\"Email address of the user\"\n    )",
+        "detail": "app.schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "UserLogin",
+        "kind": 6,
+        "importPath": "app.schemas.users",
+        "description": "app.schemas.users",
+        "peekOfCode": "class UserLogin(BaseModel):\n    email: Optional[EmailStr] = Field(\n        None,\n        description=\"Email address of the user\"\n    )\n    username: Optional[str] = Field(\n        None,\n        min_length=3,\n        max_length=50,\n        description=\"Username (alphanumeric and underscore only)\",",
+        "detail": "app.schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "UserResponse",
+        "kind": 6,
+        "importPath": "app.schemas.users",
+        "description": "app.schemas.users",
+        "peekOfCode": "class UserResponse(BaseModel):\n    user_id: str = Field(\n        ...,\n        description=\"Unique identifier for a user\"\n    )\n    email: EmailStr = Field(\n        ...,\n        description=\"User's email address\"\n    )\n    username: str = Field(",
+        "detail": "app.schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "UserRole",
+        "kind": 6,
+        "importPath": "app.schemas.user_schema",
+        "description": "app.schemas.user_schema",
+        "peekOfCode": "class UserRole(str, Enum):\n    \"\"\"User roles enumeration.\"\"\"\n    ADMIN = \"admin\"\n    MODERATOR = \"moderator\"\n    USER = \"user\"\n# Base schema with common fields\nclass UserBase(BaseModel):\n    \"\"\"Base user schema with common fields.\"\"\"\n    email: EmailStr = Field(..., description=\"User's email address\")\n    username: Optional[str] = Field(",
+        "detail": "app.schemas.user_schema",
+        "documentation": {}
+    },
+    {
+        "label": "UserBase",
+        "kind": 6,
+        "importPath": "app.schemas.user_schema",
+        "description": "app.schemas.user_schema",
+        "peekOfCode": "class UserBase(BaseModel):\n    \"\"\"Base user schema with common fields.\"\"\"\n    email: EmailStr = Field(..., description=\"User's email address\")\n    username: Optional[str] = Field(\n        None,\n        min_length=3,\n        max_length=50,\n        pattern=\"^[a-zA-Z0-9_]+$\",\n        description=\"Username (alphanumeric and underscore only)\",\n    )",
+        "detail": "app.schemas.user_schema",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreate",
+        "kind": 6,
+        "importPath": "app.schemas.user_schema",
+        "description": "app.schemas.user_schema",
+        "peekOfCode": "class UserCreate(UserBase):\n    \"\"\"Schema for creating a new user.\"\"\"\n    password: str = Field(\n        ..., min_length=8, max_length=128, description=\"Password (minimum 8 characters)\"\n    )\n    role: UserRole = Field(default=UserRole.USER, description=\"User role\")\n    @validator(\"password\")\n    def validate_password(cls, v):\n        \"\"\"Validate password strength.\"\"\"\n        return UserValidators.validate_password(v, require_special_char=True)",
+        "detail": "app.schemas.user_schema",
+        "documentation": {}
+    },
+    {
+        "label": "UserUpdate",
+        "kind": 6,
+        "importPath": "app.schemas.user_schema",
+        "description": "app.schemas.user_schema",
+        "peekOfCode": "class UserUpdate(BaseModel):\n    \"\"\"Schema for updating user information.\"\"\"\n    email: Optional[EmailStr] = Field(None, description=\"New email address\")\n    username: Optional[str] = Field(\n        None,\n        min_length=3,\n        max_length=50,\n        pattern=\"^[a-zA-Z0-9_]+$\",\n        description=\"New username\",\n    )",
+        "detail": "app.schemas.user_schema",
+        "documentation": {}
+    },
+    {
+        "label": "UserLogin",
+        "kind": 6,
+        "importPath": "app.schemas.user_schema",
+        "description": "app.schemas.user_schema",
+        "peekOfCode": "class UserLogin(BaseModel):\n    \"\"\"Schema for user authentication.\"\"\"\n    email: EmailStr = Field(..., description=\"User's email address\")\n    password: str = Field(..., min_length=1, description=\"User's password\")\n    @validator(\"email\")\n    def validate_email(cls, v):\n        \"\"\"Validate email format.\"\"\"\n        return UserValidators.validate_email(v)\n# Schema for user response (what gets returned to the client)\nclass UserResponse(BaseModel):",
+        "detail": "app.schemas.user_schema",
+        "documentation": {}
+    },
+    {
+        "label": "UserResponse",
+        "kind": 6,
+        "importPath": "app.schemas.user_schema",
+        "description": "app.schemas.user_schema",
+        "peekOfCode": "class UserResponse(BaseModel):\n    \"\"\"Schema for user response data.\"\"\"\n    id: int = Field(..., description=\"User ID\")\n    email: str = Field(..., description=\"User's email address\")\n    username: Optional[str] = Field(None, description=\"Username\")\n    first_name: str = Field(..., description=\"First name\")\n    last_name: str = Field(..., description=\"Last name\")\n    full_name: Optional[str] = Field(None, description=\"Full name\")\n    phone_number: Optional[str] = Field(None, description=\"Phone number\")\n    bio: Optional[str] = Field(None, description=\"User biography\")",
+        "detail": "app.schemas.user_schema",
+        "documentation": {}
+    },
+    {
+        "label": "UserSummary",
+        "kind": 6,
+        "importPath": "app.schemas.user_schema",
+        "description": "app.schemas.user_schema",
+        "peekOfCode": "class UserSummary(BaseModel):\n    \"\"\"Schema for minimal user information.\"\"\"\n    id: int = Field(..., description=\"User ID\")\n    email: str = Field(..., description=\"User's email address\")\n    username: Optional[str] = Field(None, description=\"Username\")\n    full_name: str = Field(..., description=\"Full name\")\n    role: UserRole = Field(..., description=\"User role\")\n    is_active: bool = Field(..., description=\"Whether the account is active\")\n    class Config:\n        \"\"\"Pydantic configuration.\"\"\"",
+        "detail": "app.schemas.user_schema",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetRequest",
+        "kind": 6,
+        "importPath": "app.schemas.user_schema",
+        "description": "app.schemas.user_schema",
+        "peekOfCode": "class PasswordResetRequest(BaseModel):\n    \"\"\"Schema for password reset request.\"\"\"\n    email: EmailStr = Field(..., description=\"User's email address\")\n    @validator(\"email\")\n    def validate_email(cls, v):\n        \"\"\"Validate email format.\"\"\"\n        return UserValidators.validate_email(v)\n# Schema for password reset confirmation\nclass PasswordResetConfirm(BaseModel):\n    \"\"\"Schema for password reset confirmation.\"\"\"",
+        "detail": "app.schemas.user_schema",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetConfirm",
+        "kind": 6,
+        "importPath": "app.schemas.user_schema",
+        "description": "app.schemas.user_schema",
+        "peekOfCode": "class PasswordResetConfirm(BaseModel):\n    \"\"\"Schema for password reset confirmation.\"\"\"\n    token: str = Field(..., description=\"Reset token\")\n    new_password: str = Field(\n        ..., min_length=8, max_length=128, description=\"New password\"\n    )\n    @validator(\"new_password\")\n    def validate_password(cls, v):\n        \"\"\"Validate password strength.\"\"\"\n        return UserValidators.validate_password(v, require_special_char=False)",
+        "detail": "app.schemas.user_schema",
+        "documentation": {}
+    },
+    {
+        "label": "UserValidators",
+        "kind": 6,
+        "importPath": "app.schemas.validators",
+        "description": "app.schemas.validators",
+        "peekOfCode": "class UserValidators:\n    @staticmethod\n    def validate_email(email: Optional[str]) -> Optional[str]:\n        if email is None:\n            return email\n        return email.lower().strip()\n    @staticmethod\n    def validate_name(name: Optional[str]) -> Optional[str]:\n        if name is None:\n            return name",
+        "detail": "app.schemas.validators",
+        "documentation": {}
+    },
+    {
+        "label": "UserService",
+        "kind": 6,
+        "importPath": "app.services.UserService",
+        "description": "app.services.UserService",
+        "peekOfCode": "class UserService:    \n    def __init__(self):\n        self.user_repo = user_repository\n    def _hash_password(self, password: str) -> str:\n        return pwd_context.hash(password)\n    def _verify_password(self, plain_password: str, hashed_password: str) -> bool:\n        return pwd_context.verify(plain_password, hashed_password)\n    def create_user(self, user_data: UserCreate) -> UserResponse:\n        try:\n            # Check if user already exists",
+        "detail": "app.services.UserService",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "app.services.UserService",
+        "description": "app.services.UserService",
+        "peekOfCode": "logger = logging.getLogger(__name__)\npwd_context = CryptContext(schemes=[\"bcrypt\"])\nclass UserService:    \n    def __init__(self):\n        self.user_repo = user_repository\n    def _hash_password(self, password: str) -> str:\n        return pwd_context.hash(password)\n    def _verify_password(self, plain_password: str, hashed_password: str) -> bool:\n        return pwd_context.verify(plain_password, hashed_password)\n    def create_user(self, user_data: UserCreate) -> UserResponse:",
+        "detail": "app.services.UserService",
+        "documentation": {}
+    },
+    {
+        "label": "pwd_context",
+        "kind": 5,
+        "importPath": "app.services.UserService",
+        "description": "app.services.UserService",
+        "peekOfCode": "pwd_context = CryptContext(schemes=[\"bcrypt\"])\nclass UserService:    \n    def __init__(self):\n        self.user_repo = user_repository\n    def _hash_password(self, password: str) -> str:\n        return pwd_context.hash(password)\n    def _verify_password(self, plain_password: str, hashed_password: str) -> bool:\n        return pwd_context.verify(plain_password, hashed_password)\n    def create_user(self, user_data: UserCreate) -> UserResponse:\n        try:",
+        "detail": "app.services.UserService",
+        "documentation": {}
+    },
+    {
+        "label": "user_service",
+        "kind": 5,
+        "importPath": "app.services.UserService",
+        "description": "app.services.UserService",
+        "peekOfCode": "user_service = UserService()",
+        "detail": "app.services.UserService",
         "documentation": {}
     },
     {
@@ -618,7 +1740,7 @@
         "kind": 2,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "def create_app() -> FastAPI:\n    \"\"\"\n    Create and configure the FastAPI application.\n    \"\"\"\n    app = FastAPI(\n        title=Settings.app_name,\n        description=Settings.app_description,\n        version=Settings.app_version,\n        openapi_url=\"/api/v1/openapi.json\",\n        docs_url=\"/api/docs\",",
+        "peekOfCode": "def create_app() -> FastAPI:\n    \"\"\"\n    Create and configure the FastAPI application.\n    \"\"\"\n    app: FastAPI = FastAPI(\n        title=Settings.app_name,\n        description=Settings.app_description,\n        version=Settings.app_version,\n        openapi_url=\"/api/v1/openapi.json\",\n        docs_url=\"/api/docs\",",
         "detail": "app.main",
         "documentation": {}
     },
