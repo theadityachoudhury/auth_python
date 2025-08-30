@@ -4,26 +4,37 @@ from sqlalchemy.sql import func
 from datetime import datetime
 from enum import Enum
 from app.config.database import Base
+import uuid
 
 
 class UserRole(str, Enum):
-    """User roles enumeration."""
     ADMIN = "admin"
     MODERATOR = "moderator"
     USER = "user"
 
-
-class User(Base):
-    """User model for storing user account information."""
+class Gender(str, Enum):
+    MALE = "male"
+    FEMALE = "female"
+    OTHER = "other"
+    PREFER_NOT_TO_SAY = "prefer_not_to_say"
     
+class UserStatus(str, Enum):
+    ACTIVE = "active"
+    INACTIVE = "inactive"
+    SUSPENDED = "suspended"
+    PENDING_VERIFICATION = "pending_verification"
+
+class User(Base):    
     __tablename__ = "users"
     
-    # Primary key
-    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
-    
-    # Basic user information
+    id = Column(
+        String(36), 
+        primary_key=True, 
+        index=True,
+        default=lambda: str(uuid.uuid4())
+    )
     email = Column(
-        String(255), 
+        String(50), 
         unique=True, 
         index=True, 
         nullable=False,
@@ -36,6 +47,11 @@ class User(Base):
         nullable=True,
         doc="User's username (optional, unique)"
     )
+    password = Column(
+        String(255), 
+        nullable=False,
+        doc="Hashed password"
+    )
     first_name = Column(
         String(100), 
         nullable=False,
@@ -46,57 +62,54 @@ class User(Base):
         nullable=False,
         doc="User's last name"
     )
-    
-    # Authentication
-    password = Column(
-        String(255), 
-        nullable=False,
-        doc="Hashed password"
-    )
-    
-    # User status and role
-    is_active = Column(
-        Boolean, 
-        default=True, 
-        nullable=False,
-        doc="Whether the user account is active"
-    )
-    is_verified = Column(
-        Boolean, 
-        default=False, 
-        nullable=False,
-        doc="Whether the user's email is verified"
-    )
-    role = Column(
-        SQLEnum(UserRole), 
-        default=UserRole.USER, 
-        nullable=False,
-        doc="User's role in the system"
-    )
-    
-    # Optional profile information
-    phone_number = Column(
-        String(20), 
+    display_name = Column(
+        String(100), 
         nullable=True,
-        doc="User's phone number (optional)"
+        doc="User's display name (optional)"
     )
-    bio = Column(
-        Text, 
-        nullable=True,
-        doc="User's biography or description (optional)"
-    )
-    profile_picture_url = Column(
+    avatar_url = Column(
         String(500), 
         nullable=True,
-        doc="URL to user's profile picture (optional)"
+        doc="URL to user's avatar image (optional)"
     )
-    
-    # Timestamps
+    phone_number = Column(
+        String(15),
+        unique=False,
+        index=True,
+        nullable=True,
+        doc="User's phone number (optional, unique)"
+    )
+    date_of_birth = Column(
+        DateTime, 
+        nullable=True,
+        doc="User's date of birth (optional)"
+    )
+    gender = Column(
+        SQLEnum(Gender),
+        nullable=True,
+        doc="Gender of the user (optional)"
+    )
+    timezone = Column(
+        String(50),
+        nullable=True,
+        doc="User's timezone (optional)"
+    )
+    locale = Column(
+        String(10),
+        nullable=True,
+        doc="User's locale/language preference (optional)"
+    )
+    status = Column(
+        SQLEnum(UserStatus), 
+        default=UserStatus.PENDING_VERIFICATION,
+        nullable=False,
+        doc="Current status of the user account"
+    )    
     created_at = Column(
         DateTime(timezone=True),
         server_default=func.now(),
         nullable=False,
-        doc="When the user account was created"
+        doc="When the user account was created",
     )
     updated_at = Column(
         DateTime(timezone=True),
@@ -105,13 +118,6 @@ class User(Base):
         nullable=False,
         doc="When the user account was last updated"
     )
-    last_login = Column(
-        DateTime(timezone=True),
-        nullable=True,
-        doc="When the user last logged in"
-    )
-    
-    # Soft delete timestamp
     deleted_at = Column(
         DateTime(timezone=True),
         nullable=True,
@@ -119,52 +125,16 @@ class User(Base):
     )
     
     def __repr__(self):
-        """String representation of the User object."""
-        return f"<User(id={self.id}, email='{self.email}', role='{self.role}')>"
+        return f"<User(id={self.id}, email='{self.email}')>"
     
     def __str__(self):
-        """Human-readable string representation."""
         return f"{self.first_name} {self.last_name} ({self.email})"
     
     @property
     def full_name(self) -> str:
-        """Get the user's full name."""
         return f"{self.first_name} {self.last_name}".strip()
     
-    @property
-    def is_admin(self) -> bool:
-        """Check if the user is an admin."""
-        return str(self.role) == UserRole.ADMIN
-    
-    @property
-    def is_moderator(self) -> bool:
-        """Check if the user is a moderator."""
-        return str(self.role) == UserRole.MODERATOR
-    
-    def has_permission(self, required_role: UserRole) -> bool:
-        """
-        Check if the user has the required role or higher permissions.
-        
-        Permission hierarchy: ADMIN > MODERATOR > USER
-        """
-        role_hierarchy = {
-            UserRole.USER: 1,
-            UserRole.MODERATOR: 2,
-            UserRole.ADMIN: 3
-        }
-        
-        user_level = role_hierarchy.get(UserRole[str(self.role)], 0)
-        required_level = role_hierarchy.get(required_role, 0)
-        
-        return user_level >= required_level
-    
     def to_dict(self, include_sensitive: bool = False) -> dict:
-        """
-        Convert the user object to a dictionary.
-        
-        Args:
-            include_sensitive: Whether to include sensitive information like password
-        """
         user_dict = {
             "id": self.id,
             "email": self.email,
@@ -172,15 +142,16 @@ class User(Base):
             "first_name": self.first_name,
             "last_name": self.last_name,
             "full_name": self.full_name,
-            "is_active": self.is_active,
-            "is_verified": self.is_verified,
-            "role": self.role.value if str(self.role) else None,
+            "display_name": self.display_name,
+            "avatar_url": self.avatar_url,
             "phone_number": self.phone_number,
-            "bio": self.bio,
-            "profile_picture_url": self.profile_picture_url,
+            "date_of_birth": self.date_of_birth.isoformat() if self.date_of_birth is not None else None,
+            "gender": self.gender.value if self.gender is not None else None,
+            "timezone": self.timezone,
+            "locale": self.locale,
+            "status": self.status.value if self.status is not None else None,
             "created_at": self.created_at,
             "updated_at": self.updated_at,
-            "last_login": self.last_login,
         }
         
         if include_sensitive:
@@ -188,3 +159,23 @@ class User(Base):
             user_dict["deleted_at"] = self.deleted_at
         
         return user_dict
+    
+    def to_response(self) -> dict:
+        return {
+            "id": self.id,
+            "email": self.email,
+            "username": self.username,
+            "first_name": self.first_name,
+            "last_name": self.last_name,
+            "full_name": f"{self.first_name} {self.last_name}".strip(),
+            "display_name": self.display_name,
+            "avatar_url": self.avatar_url,
+            "phone_number": self.phone_number,
+            "date_of_birth": self.date_of_birth,
+            "gender": self.gender,
+            "timezone": self.timezone,
+            "locale": self.locale,
+            "status": self.status,
+            "created_at": self.created_at,
+            "updated_at": self.updated_at
+        }

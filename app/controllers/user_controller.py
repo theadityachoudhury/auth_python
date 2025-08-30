@@ -1,16 +1,13 @@
 from app.services.UserService import user_service
-from app.schemas.user_schema import UserCreate, UserResponse
+from app.schemas.users import UserCreate, UserResponse
 from app.config.database import logger
 from fastapi import HTTPException, status
 
-class UserController:
-    """Controller layer for handling user-related HTTP requests and responses."""
-    
+class UserController:    
     def __init__(self):
         self.user_service = user_service
     
     async def create_user(self, user_data: UserCreate) -> UserResponse:
-        """Handle user creation request."""
         try:
             return self.user_service.create_user(user_data)
             

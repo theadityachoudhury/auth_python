@@ -668,34 +668,50 @@
     },
     {
         "label": "UserCreate",
-        "importPath": "app.schemas.user_schema",
-        "description": "app.schemas.user_schema",
+        "importPath": "app.schemas.users",
+        "description": "app.schemas.users",
         "isExtraImport": true,
-        "detail": "app.schemas.user_schema",
+        "detail": "app.schemas.users",
         "documentation": {}
     },
     {
         "label": "UserResponse",
-        "importPath": "app.schemas.user_schema",
-        "description": "app.schemas.user_schema",
+        "importPath": "app.schemas.users",
+        "description": "app.schemas.users",
         "isExtraImport": true,
-        "detail": "app.schemas.user_schema",
+        "detail": "app.schemas.users",
         "documentation": {}
     },
     {
         "label": "UserCreate",
-        "importPath": "app.schemas.user_schema",
-        "description": "app.schemas.user_schema",
+        "importPath": "app.schemas.users",
+        "description": "app.schemas.users",
         "isExtraImport": true,
-        "detail": "app.schemas.user_schema",
+        "detail": "app.schemas.users",
         "documentation": {}
     },
     {
         "label": "UserResponse",
-        "importPath": "app.schemas.user_schema",
-        "description": "app.schemas.user_schema",
+        "importPath": "app.schemas.users",
+        "description": "app.schemas.users",
         "isExtraImport": true,
-        "detail": "app.schemas.user_schema",
+        "detail": "app.schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreate",
+        "importPath": "app.schemas.users",
+        "description": "app.schemas.users",
+        "isExtraImport": true,
+        "detail": "app.schemas.users",
+        "documentation": {}
+    },
+    {
+        "label": "UserResponse",
+        "importPath": "app.schemas.users",
+        "description": "app.schemas.users",
+        "isExtraImport": true,
+        "detail": "app.schemas.users",
         "documentation": {}
     },
     {
@@ -947,6 +963,15 @@
         "documentation": {}
     },
     {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
         "label": "ABC",
         "importPath": "abc",
         "description": "abc",
@@ -979,6 +1004,38 @@
         "documentation": {}
     },
     {
+        "label": "UserStatus",
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "isExtraImport": true,
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "UserRole",
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "isExtraImport": true,
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "Gender",
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "isExtraImport": true,
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "UserStatus",
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "isExtraImport": true,
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "importPath": "app.models.user",
         "description": "app.models.user",
@@ -992,22 +1049,6 @@
         "description": "app.repositories.base_repository",
         "isExtraImport": true,
         "detail": "app.repositories.base_repository",
-        "documentation": {}
-    },
-    {
-        "label": "UserCreate",
-        "importPath": "app.schemas.users",
-        "description": "app.schemas.users",
-        "isExtraImport": true,
-        "detail": "app.schemas.users",
-        "documentation": {}
-    },
-    {
-        "label": "UserResponse",
-        "importPath": "app.schemas.users",
-        "description": "app.schemas.users",
-        "isExtraImport": true,
-        "detail": "app.schemas.users",
         "documentation": {}
     },
     {
@@ -1084,15 +1125,6 @@
         "importPath": "traceback",
         "description": "traceback",
         "detail": "traceback",
-        "documentation": {}
-    },
-    {
-        "label": "uuid",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "uuid",
-        "description": "uuid",
-        "detail": "uuid",
         "documentation": {}
     },
     {
@@ -1389,7 +1421,7 @@
         "kind": 6,
         "importPath": "app.controllers.user_controller",
         "description": "app.controllers.user_controller",
-        "peekOfCode": "class UserController:\n    \"\"\"Controller layer for handling user-related HTTP requests and responses.\"\"\"\n    def __init__(self):\n        self.user_service = user_service\n    async def create_user(self, user_data: UserCreate) -> UserResponse:\n        \"\"\"Handle user creation request.\"\"\"\n        try:\n            return self.user_service.create_user(user_data)\n        except ValueError as e:\n            logger.warning(f\"User creation validation error: {str(e)}\")",
+        "peekOfCode": "class UserController:    \n    def __init__(self):\n        self.user_service = user_service\n    async def create_user(self, user_data: UserCreate) -> UserResponse:\n        try:\n            return self.user_service.create_user(user_data)\n        except ValueError as e:\n            logger.warning(f\"User creation validation error: {str(e)}\")\n            raise HTTPException(\n                status_code=status.HTTP_400_BAD_REQUEST,",
         "detail": "app.controllers.user_controller",
         "documentation": {}
     },
@@ -1407,7 +1439,25 @@
         "kind": 6,
         "importPath": "app.models.user",
         "description": "app.models.user",
-        "peekOfCode": "class UserRole(str, Enum):\n    \"\"\"User roles enumeration.\"\"\"\n    ADMIN = \"admin\"\n    MODERATOR = \"moderator\"\n    USER = \"user\"\nclass User(Base):\n    \"\"\"User model for storing user account information.\"\"\"\n    __tablename__ = \"users\"\n    # Primary key\n    id = Column(Integer, primary_key=True, index=True, autoincrement=True)",
+        "peekOfCode": "class UserRole(str, Enum):\n    ADMIN = \"admin\"\n    MODERATOR = \"moderator\"\n    USER = \"user\"\nclass Gender(str, Enum):\n    MALE = \"male\"\n    FEMALE = \"female\"\n    OTHER = \"other\"\n    PREFER_NOT_TO_SAY = \"prefer_not_to_say\"\nclass UserStatus(str, Enum):",
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "Gender",
+        "kind": 6,
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "peekOfCode": "class Gender(str, Enum):\n    MALE = \"male\"\n    FEMALE = \"female\"\n    OTHER = \"other\"\n    PREFER_NOT_TO_SAY = \"prefer_not_to_say\"\nclass UserStatus(str, Enum):\n    ACTIVE = \"active\"\n    INACTIVE = \"inactive\"\n    SUSPENDED = \"suspended\"\n    PENDING_VERIFICATION = \"pending_verification\"",
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "UserStatus",
+        "kind": 6,
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "peekOfCode": "class UserStatus(str, Enum):\n    ACTIVE = \"active\"\n    INACTIVE = \"inactive\"\n    SUSPENDED = \"suspended\"\n    PENDING_VERIFICATION = \"pending_verification\"\nclass User(Base):    \n    __tablename__ = \"users\"\n    id = Column(\n        String(36), \n        primary_key=True, ",
         "detail": "app.models.user",
         "documentation": {}
     },
@@ -1416,7 +1466,7 @@
         "kind": 6,
         "importPath": "app.models.user",
         "description": "app.models.user",
-        "peekOfCode": "class User(Base):\n    \"\"\"User model for storing user account information.\"\"\"\n    __tablename__ = \"users\"\n    # Primary key\n    id = Column(Integer, primary_key=True, index=True, autoincrement=True)\n    # Basic user information\n    email = Column(\n        String(255), \n        unique=True, \n        index=True, ",
+        "peekOfCode": "class User(Base):    \n    __tablename__ = \"users\"\n    id = Column(\n        String(36), \n        primary_key=True, \n        index=True,\n        default=lambda: str(uuid.uuid4())\n    )\n    email = Column(\n        String(50), ",
         "detail": "app.models.user",
         "documentation": {}
     },
@@ -1443,7 +1493,7 @@
         "kind": 6,
         "importPath": "app.repositories.user_repository",
         "description": "app.repositories.user_repository",
-        "peekOfCode": "class UserRepository(BaseRepository[User]):\n    \"\"\"Repository for User model with specific user-related database operations.\"\"\"\n    def __init__(self):\n        super().__init__(User)\n    def get_by_email(self, email: str) -> Optional[User]:\n        \"\"\"Get user by email address.\"\"\"\n        return self.get_by_field(\"email\", email)\n    def get_by_username(self, username: str) -> Optional[User]:\n        \"\"\"Get user by username.\"\"\"\n        return self.get_by_field(\"username\", username)",
+        "peekOfCode": "class UserRepository(BaseRepository[User]):\n    def __init__(self):\n        super().__init__(User)\n    def get_by_email(self, email: str) -> Optional[User]:\n        return self.get_by_field(\"email\", email)\n    def get_by_username(self, username: str) -> Optional[User]:\n        return self.get_by_field(\"username\", username)\n    def get_active_users(self, skip: int = 0, limit: int = 100) -> List[User]:\n        return self.get_all(\n            skip=skip, ",
         "detail": "app.repositories.user_repository",
         "documentation": {}
     },
@@ -1475,38 +1525,11 @@
         "documentation": {}
     },
     {
-        "label": "UserRole",
-        "kind": 6,
-        "importPath": "app.schemas.users",
-        "description": "app.schemas.users",
-        "peekOfCode": "class UserRole(str, Enum):\n    ADMIN = \"admin\",\n    MODERATOR = \"moderator\",\n    USER = \"user\"\nclass Gender(str, Enum):\n    MALE = \"male\",\n    FEMALE = \"female\",\n    OTHER = \"other\",\n    PREFER_NOT_TO_SAY = \"prefer_not_to_say\"\nclass UserStatus(str, Enum):",
-        "detail": "app.schemas.users",
-        "documentation": {}
-    },
-    {
-        "label": "Gender",
-        "kind": 6,
-        "importPath": "app.schemas.users",
-        "description": "app.schemas.users",
-        "peekOfCode": "class Gender(str, Enum):\n    MALE = \"male\",\n    FEMALE = \"female\",\n    OTHER = \"other\",\n    PREFER_NOT_TO_SAY = \"prefer_not_to_say\"\nclass UserStatus(str, Enum):\n    ACTIVE = \"active\",\n    INACTIVE = \"inactive\",\n    SUSPENDED = \"suspended\",\n    PENDING_VERIFICATION = \"pending_verification\"",
-        "detail": "app.schemas.users",
-        "documentation": {}
-    },
-    {
-        "label": "UserStatus",
-        "kind": 6,
-        "importPath": "app.schemas.users",
-        "description": "app.schemas.users",
-        "peekOfCode": "class UserStatus(str, Enum):\n    ACTIVE = \"active\",\n    INACTIVE = \"inactive\",\n    SUSPENDED = \"suspended\",\n    PENDING_VERIFICATION = \"pending_verification\"\nclass UserBase(BaseModel):\n    user_id: Optional[str] = Field(\n        None,\n        description=\"Unique identifier for a user\"\n    )",
-        "detail": "app.schemas.users",
-        "documentation": {}
-    },
-    {
         "label": "UserBase",
         "kind": 6,
         "importPath": "app.schemas.users",
         "description": "app.schemas.users",
-        "peekOfCode": "class UserBase(BaseModel):\n    user_id: Optional[str] = Field(\n        None,\n        description=\"Unique identifier for a user\"\n    )\n    email: EmailStr = Field(\n        ..., \n        description=\"User's email address\"\n    )\n    username: Optional[str] = Field(",
+        "peekOfCode": "class UserBase(BaseModel):\n    id: Optional[str] = Field(\n        None,\n        description=\"Unique identifier for a user\"\n    )\n    email: EmailStr = Field(\n        ..., \n        description=\"User's email address\"\n    )\n    username: Optional[str] = Field(",
         "detail": "app.schemas.users",
         "documentation": {}
     },
@@ -1515,7 +1538,7 @@
         "kind": 6,
         "importPath": "app.schemas.users",
         "description": "app.schemas.users",
-        "peekOfCode": "class UserCreate(UserBase):\n    role: UserRole = Field(\n        default=UserRole.USER,\n        description=\"Role of the user\"\n    )\nclass UserLogin(BaseModel):\n    email: Optional[EmailStr] = Field(\n        None,\n        description=\"Email address of the user\"\n    )",
+        "peekOfCode": "class UserCreate(UserBase):\n    pass\nclass UserLogin(BaseModel):\n    email: Optional[EmailStr] = Field(\n        None,\n        description=\"Email address of the user\"\n    )\n    username: Optional[str] = Field(\n        None,\n        min_length=3,",
         "detail": "app.schemas.users",
         "documentation": {}
     },
@@ -1533,7 +1556,7 @@
         "kind": 6,
         "importPath": "app.schemas.users",
         "description": "app.schemas.users",
-        "peekOfCode": "class UserResponse(BaseModel):\n    user_id: str = Field(\n        ...,\n        description=\"Unique identifier for a user\"\n    )\n    email: EmailStr = Field(\n        ...,\n        description=\"User's email address\"\n    )\n    username: str = Field(",
+        "peekOfCode": "class UserResponse(BaseModel):\n    id: str = Field(\n        ...,\n        description=\"Unique identifier for a user\"\n    )\n    email: EmailStr = Field(\n        ...,\n        description=\"User's email address\"\n    )\n    username: Optional[str] = Field(",
         "detail": "app.schemas.users",
         "documentation": {}
     },

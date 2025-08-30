@@ -5,7 +5,7 @@ from passlib.context import CryptContext
 from app.repositories.user_repository import user_repository
 from app.models.user import User
 import logging
-from app.schemas.user_schema import UserCreate, UserResponse
+from app.schemas.users import UserCreate, UserResponse
 
 logger = logging.getLogger(__name__)
 
@@ -38,16 +38,16 @@ class UserService:
             # Prepare user data
             user_dict = user_data.model_dump()
             user_dict["password"] = self._hash_password(user_data.password)
-            user_dict["created_at"] = datetime.utcnow()
-            user_dict["is_active"] = True
             
             # Create user
             user = self.user_repo.create(user_dict)
             
             logger.info(f"User created successfully: {user.email}")
-            return UserResponse.model_validate(user)
+            return UserResponse.model_validate(user.to_response())
+            # return UserResponse.model_validate(user.to_dict())
             
         except Exception as e:
+            print(e)
             logger.error(f"Failed to create user: {str(e)}")
             raise
 

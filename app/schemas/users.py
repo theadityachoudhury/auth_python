@@ -3,28 +3,10 @@ from pydantic import EmailStr, Field, BaseModel, field_validator, model_validato
 from typing import Optional
 from datetime import datetime
 from app.schemas.validators import UserValidators
-
-
-class UserRole(str, Enum):
-    ADMIN = "admin",
-    MODERATOR = "moderator",
-    USER = "user"
-
-class Gender(str, Enum):
-    MALE = "male",
-    FEMALE = "female",
-    OTHER = "other",
-    PREFER_NOT_TO_SAY = "prefer_not_to_say"
-
-class UserStatus(str, Enum):
-    ACTIVE = "active",
-    INACTIVE = "inactive",
-    SUSPENDED = "suspended",
-    PENDING_VERIFICATION = "pending_verification"
-
+from app.models.user import UserRole, Gender, UserStatus
 
 class UserBase(BaseModel):
-    user_id: Optional[str] = Field(
+    id: Optional[str] = Field(
         None,
         description="Unique identifier for a user"
     )
@@ -125,10 +107,7 @@ class UserBase(BaseModel):
         return UserValidators.validate_phone_number(v)
 
 class UserCreate(UserBase):
-    role: UserRole = Field(
-        default=UserRole.USER,
-        description="Role of the user"
-    )
+    pass
 
 class UserLogin(BaseModel):
     email: Optional[EmailStr] = Field(
@@ -163,22 +142,22 @@ class UserLogin(BaseModel):
     def validate_password(cls, v):
         return UserValidators.validate_password(v, require_special_char=True)
 
-    # Checking for whether both username or password is empty. If empty then send error response
+    # Checking for whether both username and email are empty. If empty then send error response
     @model_validator(mode='before')
     @classmethod
-    def check_username_or_email(cls,data):
-        if isinstance(data,dict):
+    def check_username_or_email(cls, data):
+        if isinstance(data, dict):
             email = data.get('email')
             username = data.get('username')
 
-            #check if both username and email are empty/None
-            if not email or not username:
+            # Check if both username and email are empty/None
+            if not email and not username:
                 raise ValueError('Either email or username must be provided')
 
         return data
 
 class UserResponse(BaseModel):
-    user_id: str = Field(
+    id: str = Field(
         ...,
         description="Unique identifier for a user"
     )
@@ -186,8 +165,8 @@ class UserResponse(BaseModel):
         ...,
         description="User's email address"
     )
-    username: str = Field(
-        ...,
+    username: Optional[str] = Field(
+        None,
         description="User's username"
     )
     first_name: str = Field(
@@ -198,3 +177,48 @@ class UserResponse(BaseModel):
         ...,
         description="User's last name"
     )
+    full_name: str = Field(
+        ...,
+        description="User's full name"
+    )
+    display_name: Optional[str] = Field(
+        None,
+        description="User's display name"
+    )
+    avatar_url: Optional[str] = Field(
+        None,
+        description="URL to user's avatar image (if set)"
+    )
+    phone_number: Optional[str] = Field(
+        None,
+        description="User's phone number (if set)"
+    )
+    date_of_birth: Optional[datetime] = Field(
+        None,
+        description="User's date of birth (if set)"
+    )
+    gender: Optional[Gender] = Field(
+        None,
+        description="Gender of the user (if set)"
+    )
+    timezone: Optional[str] = Field(
+        None,
+        description="Timezone of the user (if set)"
+    )
+    locale: Optional[str] = Field(
+        None,
+        description="Locale of the user (if set)"
+    )
+    status: UserStatus = Field(
+        ...,
+        description="Account status"
+    )
+    created_at: datetime = Field(
+        ...,
+        description="Timestamp when the user was created"
+    )
+    updated_at: datetime = Field(
+        ...,
+        description="Timestamp when the user was last updated"
+    )
+    
